@@ -27,7 +27,7 @@ class GoriberIMDB extends Component {
         ));
         return (
             <div>
-                <h1>Goriber IMDB 🎥</h1>
+                <h1>গরিবের IMDb 🎥</h1>
                 <SearchMovie movieSearch={this.movieSearch} />
                 {searchResults}
             </div>
