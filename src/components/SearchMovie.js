@@ -25,7 +25,7 @@ class SearchMovie extends Component {
         event.preventDefault();
         let data = {};
         if (this.state.movieName !== '') {
-            let url = `http://www.omdbapi.com/?apikey=7e4e81e9&s=${this.state.movieName}`;
+            let url = `https://www.omdbapi.com/?apikey=7e4e81e9&s=${this.state.movieName}`;
             data = await getSearchResults(url);
         }
 
