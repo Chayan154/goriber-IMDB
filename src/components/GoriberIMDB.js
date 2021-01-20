@@ -7,7 +7,7 @@ class GoriberIMDb extends Component {
         super(props);
 
         this.state = {
-            movie: '',
+            searchTerm: '',
             movieData: {},
             movieList: [],
         };
@@ -15,7 +15,7 @@ class GoriberIMDb extends Component {
 
     movieSearch = (name, data) => {
         this.setState({
-            movie: name,
+            searchTerm: name,
             movieData: data,
             movieList: data.Search,
         });

@@ -8,8 +8,12 @@ function App() {
         <Router>
             <div className='App'>
                 <Switch>
-                    <Route path='/' exact component={GoriberIMDb} />
-                    <Route path='/aboutme' component={AboutMe} />
+                    <Route path='/' exact>
+                        <GoriberIMDb />
+                    </Route>
+                    <Route path='/aboutme'>
+                        <AboutMe />
+                    </Route>
                 </Switch>
             </div>
         </Router>
