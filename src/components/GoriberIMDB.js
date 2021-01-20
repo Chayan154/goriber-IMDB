@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchMovie from './SearchMovie';
 import MovieItem from './MovieItem';
 
-class GoriberIMDB extends Component {
+class GoriberIMDb extends Component {
     constructor(props) {
         super(props);
 
@@ -35,4 +35,4 @@ class GoriberIMDB extends Component {
     }
 }
 
-export default GoriberIMDB;
+export default GoriberIMDb;

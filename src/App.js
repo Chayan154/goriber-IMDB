@@ -1,11 +1,18 @@
 import './App.css';
-import GoriberIMDB from './components/GoriberIMDB';
+import GoriberIMDb from './components/GoriberIMDb';
+import AboutMe from './components/AboutMe';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
     return (
-        <div className='App'>
-            <GoriberIMDB />
-        </div>
+        <Router>
+            <div className='App'>
+                <Switch>
+                    <Route path='/' exact component={GoriberIMDb} />
+                    <Route path='/aboutme' component={AboutMe} />
+                </Switch>
+            </div>
+        </Router>
     );
 }
 
