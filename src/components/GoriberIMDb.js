@@ -28,7 +28,6 @@ class GoriberIMDb extends Component {
         ));
         return (
             <div>
-                <h1>গরিবের IMDb 🎥</h1>
                 <SearchMovie movieSearch={this.movieSearch} />
                 {searchResults}
             </div>
