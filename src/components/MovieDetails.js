@@ -20,7 +20,7 @@ class MovieDetails extends Component {
     }
 
     async componentDidMount() {
-        const data = await getMovieDetails('tt4154756');
+        const data = await getMovieDetails(this.state.movieId);
         this.setState({
             movieData: data,
         });
@@ -28,6 +28,10 @@ class MovieDetails extends Component {
 
     render() {
         const movie = this.state.movieData;
+        if (!movie.Title) {
+            return <h1>Loading...</h1>;
+        }
+
         return (
             <div>
                 <h2>{movie.Title}</h2>
