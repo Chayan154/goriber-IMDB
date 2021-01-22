@@ -33,6 +33,10 @@ nav a:hover {
     background-color: #0c2461;
 }
 
+.search-movie {
+    margin: 13px;
+}
+
 .App-link {
     color: #61dafb;
 }

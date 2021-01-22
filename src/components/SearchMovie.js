@@ -29,13 +29,13 @@ class SearchMovie extends Component {
             data = await getSearchResults(url);
         }
 
-        //http://www.omdbapi.com/?apikey=7e4e81e9&s=avengers
+        //https://www.omdbapi.com/?apikey=7e4e81e9&s=avengers
         this.props.movieSearch(this.state.movieName, data);
     };
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className='search-movie' onSubmit={this.handleSubmit}>
                 <label>Search Movies: </label>
                 <input
                     type='text'

@@ -1,35 +1,36 @@
 import React, { Component } from 'react';
 import SearchMovie from './SearchMovie';
-import MovieItem from './MovieItem';
+import SearchResults from './SearchResults';
 
+const initialState = {
+    searchTerm: '',
+    movieData: {},
+    movieList: [],
+    error: '',
+};
 class GoriberIMDb extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            searchTerm: '',
-            movieData: {},
-            movieList: [],
-        };
-    }
-    //test comment
+    state = initialState;
 
     movieSearch = (name, data) => {
-        this.setState({
-            searchTerm: name,
-            movieData: data,
-            movieList: data.Search,
-        });
+        if (data.Response !== 'False') {
+            this.setState({
+                searchTerm: name,
+                movieData: data,
+                movieList: data.Search,
+                error: '',
+            });
+        } else {
+            this.setState({
+                error: data.Error,
+            });
+        }
     };
 
     render() {
-        const searchResults = this.state.movieList.map((film) => (
-            <MovieItem key={film.imdbID} film={film} />
-        ));
         return (
             <div>
                 <SearchMovie movieSearch={this.movieSearch} />
-                {searchResults}
+                <SearchResults data={this.state} />
             </div>
         );
     }

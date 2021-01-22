@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function MovieItem(props) {
-    const film = props.film;
+function MovieItem({ film }) {
     return (
         <div>
-            <h2>{film.Title}</h2>
             <img src={film.Poster} alt={film.Title} />
+            <Link to={`/${film.imdbID}`}>
+                <h2>{film.Title}</h2>
+            </Link>
         </div>
     );
 }
