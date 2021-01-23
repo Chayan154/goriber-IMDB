@@ -7,6 +7,7 @@ const initialState = {
     movieData: {},
     movieList: [],
     error: '',
+    response: '',
 };
 class GoriberIMDb extends Component {
     state = initialState;
@@ -17,11 +18,14 @@ class GoriberIMDb extends Component {
                 searchTerm: name,
                 movieData: data,
                 movieList: data.Search,
+                response: data.Response,
                 error: '',
             });
         } else {
             this.setState({
+                searchTerm: name,
                 error: data.Error,
+                response: data.Response,
             });
         }
     };
@@ -30,7 +34,7 @@ class GoriberIMDb extends Component {
         return (
             <div>
                 <SearchMovie movieSearch={this.movieSearch} />
-                <SearchResults data={this.state} />
+                {this.state.response && <SearchResults data={this.state} />}
             </div>
         );
     }

@@ -9,7 +9,12 @@ function SearchResults({ data }) {
             <MovieItem key={film.imdbID} film={film} />
         ))
     );
-    return <div>{searchResults}</div>;
+    return (
+        <div>
+            <h2>Search Results for: '{data.searchTerm}'</h2>
+            <div>{searchResults}</div>
+        </div>
+    );
 }
 
 export default SearchResults;

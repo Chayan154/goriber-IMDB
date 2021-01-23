@@ -36,6 +36,7 @@ class MovieDetails extends Component {
             <div>
                 <h2>{movie.Title}</h2>
                 <img src={movie.Poster} alt={movie.Title} />
+                <h3>Genre: {movie.Genre}</h3>
                 <h3>Release Date: {movie.Released}</h3>
                 <h4>IMDb Rating: {movie.imdbRating}</h4>
             </div>
