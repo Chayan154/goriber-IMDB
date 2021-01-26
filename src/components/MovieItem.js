@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function MovieItem({ film }) {
     return (
-        <div>
+        <div className='item-box'>
             <img src={film.Poster} alt={film.Title} />
             <Link to={`/${film.imdbID}`}>
                 <h2>{film.Title}</h2>

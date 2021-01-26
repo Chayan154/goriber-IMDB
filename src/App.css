@@ -40,3 +40,16 @@ nav a:hover {
 .App-link {
     color: #61dafb;
 }
+
+.item-box {
+    width: 20%;
+    min-width: 250px;
+    padding: 15px;
+    background-color: rgb(163, 61, 61);
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
