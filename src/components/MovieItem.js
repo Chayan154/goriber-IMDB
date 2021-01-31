@@ -5,9 +5,10 @@ function MovieItem({ film }) {
     return (
         <div className='item-box'>
             <img src={film.Poster} alt={film.Title} />
-            <Link to={`/${film.imdbID}`}>
-                <h2>{film.Title}</h2>
-            </Link>
+            <p>
+                {film.Title} ({film.Year})
+            </p>
+            <Link to={`/${film.imdbID}`}>More Details</Link>
         </div>
     );
 }

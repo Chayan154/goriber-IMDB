@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Ratings from './Ratings';
 
 async function getMovieDetails(id) {
     let url = `https://www.omdbapi.com/?apikey=7e4e81e9&i=${id}`;
@@ -39,11 +38,25 @@ class MovieDetails extends Component {
                 <img src={movie.Poster} alt={movie.Title} />
                 <h3>Genre: {movie.Genre}</h3>
                 <h3>Release Date: {movie.Released}</h3>
-                <Ratings data={movie} />
-                <p>
-                    <h3 style={{ display: 'inline' }}>Plot: </h3>
-                    {movie.Plot}
-                </p>
+                <div className='rating'>
+                    <h3>Ratings</h3>
+                    <section className='rating-items'>
+                        <div>
+                            <img src='./IMDb_logo.svg' />
+                            <p>
+                                {movie.imdbRating}/10 ({movie.imdbVotes} votes)
+                            </p>
+                        </div>
+                        <div>
+                            <img src='./Metacritic_logo_original.svg' />
+                            <p>{movie.Metascore}/100</p>
+                        </div>
+                        <div>
+                            <img src='./Rotten_Tomatoes.svg' />
+                            <p>{movie.Ratings[2].Value}</p>
+                        </div>
+                    </section>
+                </div>
             </div>
         );
     }

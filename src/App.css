@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .App {
     text-align: center;
 }
@@ -14,8 +19,7 @@ nav {
 }
 
 nav a {
-    margin-top: -13px;
-    margin-bottom: 5px;
+    margin: 10px;
     background-color: #1e3799;
     color: white;
     text-decoration: none;
@@ -41,15 +45,89 @@ nav a:hover {
     color: #61dafb;
 }
 
+a {
+    text-decoration: none;
+}
+
+.results {
+    width: 90%;
+    display: flex;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+}
+
 .item-box {
     width: 20%;
     min-width: 250px;
+    height: 400px;
     padding: 15px;
     background-color: rgb(163, 61, 61);
-    border: 3px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.item-box img {
+    height: 320px;
+}
+
+.item-box p {
+    color: white;
+    height: 30px;
+}
+
+.item-box a {
+    padding: 3px 9px;
+    padding-bottom: 6px;
+    line-height: 25px;
+    border-radius: 10px;
+    color: #1e1e1e;
+    font-weight: 600;
+    background-color: #05c46b;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.item-box a:hover {
+    background-color: #0be881;
+}
+
+.rating-items {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.rating-items h3 {
+    text-decoration: underline;
+    line-height: 30px;
+    margin: 4px 5px 6px 5px;
+}
+
+.rating-items div {
+    display: flex;
+    gap: 5px;
+    margin: 5px 10px;
+}
+
+.rating-items div p {
+    line-height: 30px;
+}
+
+.rating-items div img {
+    width: 30px;
+    height: 30px;
 }

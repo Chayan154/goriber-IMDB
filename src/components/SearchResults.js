@@ -12,7 +12,7 @@ function SearchResults({ data }) {
     return (
         <div>
             <h2>Search Results for: '{data.searchTerm}'</h2>
-            <div>{searchResults}</div>
+            <div className='results'>{searchResults}</div>
         </div>
     );
 }
