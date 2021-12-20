@@ -39,7 +39,7 @@ class SearchMovie extends Component {
                 <input
                     type='text'
                     value={this.state.movieName}
-                    placeholder='search for a movies'
+                    placeholder='search for a movie e.g. fargo'
                     onChange={this.handleChange}
                 />
                 <button type='submit'>🔍</button>
