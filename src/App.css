@@ -147,6 +147,47 @@ a {
     background-color: #0be881;
 }
 
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    background: linear-gradient(0deg, #ed4264, #ffedbc);
+    width: 50%;
+    margin: 5px auto;
+    font-size: 30px;
+    border: dashed 2px black;
+    border-radius: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 35px;
+    padding: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.dContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.poster {
+}
+
+.details {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
 .rating-items {
     display: flex;
     justify-content: center;

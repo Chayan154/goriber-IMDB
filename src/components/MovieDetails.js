@@ -34,16 +34,24 @@ class MovieDetails extends Component {
         }
 
         return (
-            <div>
-                <h2>{movie.Title}</h2>
-                <img src={movie.Poster} alt={movie.Title} />
-                <h3>Genre: {movie.Genre}</h3>
-                <h3>Release Date: {movie.Released}</h3>
-                <Ratings data={movie} />
-                <p>
-                    <h3 style={{ display: 'inline' }}>Plot: </h3>
-                    {movie.Plot}
-                </p>
+            <div className='movieDetails'>
+                <h2 className='title'>{movie.Title}</h2>
+                <div className='dContainer'>
+                    <img
+                        className='poster'
+                        src={movie.Poster}
+                        alt={movie.Title}
+                    />
+                    <section className='details'>
+                        <h3>Genre: {movie.Genre}</h3>
+                        <h3>Release Date: {movie.Released}</h3>
+                        <Ratings data={movie} />
+                        <p>
+                            <h3 style={{ display: 'inline' }}>Plot: </h3>
+                            {movie.Plot}
+                        </p>
+                    </section>
+                </div>
             </div>
         );
     }
