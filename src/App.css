@@ -3,8 +3,13 @@
     margin: 0;
 }
 
+body {
+    background: linear-gradient(90deg, #ffd2d2, 60%, #0abfbc);
+}
+
 .App {
     text-align: center;
+    /* background: linear-gradient(315deg, #de6262, #ffb88c); */
 }
 
 .App-logo {
@@ -38,7 +43,43 @@ nav a:hover {
 }
 
 .search-movie {
-    margin: 13px;
+    margin: 15px auto;
+    width: 30%;
+    min-width: 270px;
+    padding: 10px 20px;
+    display: flex;
+    background: rgb(255, 255, 255);
+    border: solid 2px black;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    gap: 5%;
+    font-size: 20px;
+}
+
+.search-movie input {
+    width: 83%;
+    height: 35px;
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: inherit;
+}
+
+.search-movie input:focus {
+    border-bottom: solid 1px rgb(116, 114, 114);
+}
+
+.search-movie button {
+    width: auto;
+    height: 35px;
+    font-size: 25px;
+    margin: auto;
+    background: transparent;
+    border: none;
 }
 
 .App-link {
@@ -65,7 +106,8 @@ a {
     min-width: 250px;
     height: 400px;
     padding: 15px;
-    background-color: rgb(163, 61, 61);
+    /* background: linear-gradient(45deg, #556270, #ff6b6b); */
+    background: linear-gradient(135deg, #4b6cb7, #182848);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,4 +172,10 @@ a {
 .rating-items div img {
     width: 30px;
     height: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .search-movie {
+        font-size: 17px;
+    }
 }

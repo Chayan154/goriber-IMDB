@@ -3,8 +3,8 @@ import React from 'react';
 function AboutMe() {
     return (
         <div>
-            <h1>I Am Chayan.</h1>
-            <h3>I Am A Web Developer.</h3>
+            <h1>I am Chayan.</h1>
+            <h3>I had too much free time during lockdown.</h3>
         </div>
     );
 }

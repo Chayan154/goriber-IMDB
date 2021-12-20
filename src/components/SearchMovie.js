@@ -36,10 +36,10 @@ class SearchMovie extends Component {
     render() {
         return (
             <form className='search-movie' onSubmit={this.handleSubmit}>
-                <label>Search Movies: </label>
                 <input
                     type='text'
                     value={this.state.movieName}
+                    placeholder='search for a movies'
                     onChange={this.handleChange}
                 />
                 <button type='submit'>🔍</button>
