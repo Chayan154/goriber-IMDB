@@ -43,13 +43,48 @@ class MovieDetails extends Component {
                         alt={movie.Title}
                     />
                     <section className='details'>
-                        <h3>Genre: {movie.Genre}</h3>
-                        <h3>Release Date: {movie.Released}</h3>
-                        <Ratings data={movie} />
                         <p>
-                            <h3 style={{ display: 'inline' }}>Plot: </h3>
+                            <span>Genre: </span>
+                            {movie.Genre}
+                        </p>
+                        <p>
+                            <span>Released: </span>
+                            {movie.Released}
+                        </p>
+                        <p>
+                            <span>Runtime: </span>
+                            {movie.Runtime}
+                        </p>
+                        <p>
+                            <span>Language: </span>
+                            {movie.Language}
+                        </p>
+                        <p>
+                            <span>Country: </span>
+                            {movie.Country}
+                        </p>
+                        <p>
+                            <span>Director: </span>
+                            {movie.Director}
+                        </p>
+                        <p>
+                            <span>Writers: </span>
+                            {movie.Writer}
+                        </p>
+                        <p>
+                            <span>Actors: </span>
+                            {movie.Actors}
+                        </p>
+
+                        <p>
+                            <span>Plot: </span>
                             {movie.Plot}
                         </p>
+                        <p>
+                            <span>Awards: </span>
+                            {movie.Awards}
+                        </p>
+                        <Ratings data={movie} />
                     </section>
                 </div>
             </div>
